@@ -15,7 +15,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::factory()->create([
+         'name'=>'test doe',
+         'email'=>'test@gmail.com'
+        ]);
 
      $categories=[
         'Technology',
@@ -30,6 +33,7 @@ class DatabaseSeeder extends Seeder
         Category::create(['name'=>$category]);
      };
      Post::factory(100)->create();
-  
+
+   
     }
 }
